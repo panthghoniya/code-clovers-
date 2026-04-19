@@ -1,0 +1,30 @@
+[
+  {
+    "id": "port-1",
+    "title": "Fintech Dashboard UI",
+    "category": "UI/UX Design",
+    "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800&h=600",
+    "result": "Increased engagement by 40%"
+  },
+  {
+    "id": "port-2",
+    "title": "Nexus E-Commerce",
+    "category": "Shopify Development",
+    "image": "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=800&h=600",
+    "result": "2x Conversion Rate"
+  },
+  {
+    "id": "port-3",
+    "title": "HealthTech SaaS App",
+    "category": "Software Development",
+    "image": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800&h=600",
+    "result": "50k+ Active Users"
+  },
+  {
+    "id": "port-4",
+    "title": "Brand Identity Redesign",
+    "category": "Graphic Designing",
+    "image": "https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&q=80&w=800&h=600",
+    "result": "Award-winning Design"
+  }
+]

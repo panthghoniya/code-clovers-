@@ -1,0 +1,37 @@
+[
+  {
+    "id": "srv-1",
+    "title": "Web Development",
+    "icon": "Code2"
+  },
+  {
+    "id": "srv-2",
+    "title": "Software Development",
+    "icon": "TerminalSquare"
+  },
+  {
+    "id": "srv-3",
+    "title": "Shopify Websites",
+    "icon": "ShoppingCart"
+  },
+  {
+    "id": "srv-4",
+    "title": "UI/UX Design",
+    "icon": "PenTool"
+  },
+  {
+    "id": "srv-5",
+    "title": "Graphic Designing",
+    "icon": "Palette"
+  },
+  {
+    "id": "srv-6",
+    "title": "Video Editing",
+    "icon": "Video"
+  },
+  {
+    "id": "srv-7",
+    "title": "Social Media Handling",
+    "icon": "Share2"
+  }
+]

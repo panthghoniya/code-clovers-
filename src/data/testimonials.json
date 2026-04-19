@@ -1,0 +1,32 @@
+[
+  {
+    "id": "test-1",
+    "name": "Sarah Jenkins",
+    "role": "Chief Executive Officer",
+    "companyName": "TechStart",
+    "location": "San Francisco, CA",
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80",
+    "feedback": "Code Clover delivered exceptional quality. The web application they built completely transformed our operations and scaled perfectly.",
+    "rating": 5
+  },
+  {
+    "id": "test-2",
+    "name": "David Chen",
+    "role": "Founder & Director",
+    "companyName": "Nexus Retail",
+    "location": "New York City, NY",
+    "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=150&q=80",
+    "feedback": "They tailor their solutions to our specific needs and goals. The Shopify store they designed is visually stunning and highly optimized.",
+    "rating": 5
+  },
+  {
+    "id": "test-3",
+    "name": "Emily Rodriguez",
+    "role": "Marketing Director",
+    "companyName": "InHive Space",
+    "location": "London, UK",
+    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&q=80",
+    "feedback": "Working with them was a great experience. Their design team has an incredible eye for detail, increasing our user retention significantly.",
+    "rating": 5
+  }
+]

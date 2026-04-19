@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#030303] text-text-primary font-sans antialiased overflow-x-hidden;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Gasdrifo, "Bodoni Moda", serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer utilities {
+  .premium-card {
+    @apply bg-[#0D0D0D] border border-white/5 rounded-[32px] overflow-hidden transition-all duration-500 hover:border-white/10;
+  }
+  
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
