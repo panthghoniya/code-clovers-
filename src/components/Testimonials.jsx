@@ -64,7 +64,7 @@ const Testimonials = ({ testimonials }) => {
       {/* Horizontal Scrollable Cards */}
       <div 
         ref={scrollContainerRef}
-        className="w-full overflow-x-auto no-scrollbar pb-8 -mx-4 px-4 sm:mx-0 sm:px-0 flex gap-5 snap-x snap-mandatory"
+        className="w-full overflow-x-auto no-scrollbar pb-8 -mx-3 px-3 sm:-mx-5 sm:px-5 flex gap-4 snap-x snap-mandatory"
       >
         {testimonials.map((testimonial, index) => (
           <motion.div 
@@ -73,7 +73,7 @@ const Testimonials = ({ testimonials }) => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.1 }}
-            className="w-[320px] md:w-[380px] premium-card p-6 md:p-8 flex flex-col shrink-0 min-h-[400px] hover:-translate-y-1 snap-start"
+            className="w-[min(85vw,320px)] sm:w-[320px] md:w-[380px] premium-card p-5 md:p-8 flex flex-col shrink-0 min-h-[360px] md:min-h-[400px] hover:-translate-y-1 snap-start"
           >
             
             {/* Card Top Row: Avatar & Company Badge */}

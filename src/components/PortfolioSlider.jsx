@@ -14,8 +14,8 @@ const PortfolioSlider = ({ portfolio }) => {
         <p className="text-muted-foreground text-sm md:text-base">Selected projects driving real results.</p>
       </motion.div>
 
-      <div className="w-full overflow-x-auto no-scrollbar pb-8 -mx-4 px-4 sm:mx-0 sm:px-0">
-        <div className="flex gap-5 w-max">
+      <div className="w-full overflow-x-auto no-scrollbar pb-8 -mx-3 px-3 sm:-mx-5 sm:px-5">
+        <div className="flex gap-4 w-max">
           {portfolio.map((project, index) => (
             <motion.div 
               key={project.id}
@@ -23,7 +23,7 @@ const PortfolioSlider = ({ portfolio }) => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="w-[300px] md:w-[380px] h-[400px] md:h-[480px] rounded-[32px] overflow-hidden relative shrink-0 group cursor-pointer shadow-lg"
+              className="w-[min(80vw,300px)] sm:w-[300px] md:w-[380px] h-[360px] sm:h-[400px] md:h-[480px] rounded-[28px] overflow-hidden relative shrink-0 group cursor-pointer shadow-lg"
             >
               {/* Full Background Image */}
               <img 

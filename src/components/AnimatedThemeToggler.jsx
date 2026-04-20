@@ -18,7 +18,7 @@ export function AnimatedThemeToggler() {
   return (
     <button
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="fixed top-4 right-4 md:top-8 md:right-8 z-50 w-12 h-12 rounded-full bg-[var(--card)] border border-[var(--card-border)] flex items-center justify-center shadow-lg overflow-hidden group hover:scale-105 transition-transform"
+      className="fixed top-3 right-3 md:top-8 md:right-8 z-50 w-10 h-10 md:w-12 md:h-12 rounded-full bg-[var(--card)] border border-[var(--card-border)] flex items-center justify-center shadow-lg overflow-hidden group hover:scale-105 transition-transform"
       aria-label="Toggle Theme"
     >
       <div className="relative w-full h-full flex items-center justify-center">

@@ -41,7 +41,7 @@ const ExecutiveProfile = () => {
       </div>
 
       {/* Main Content - Split Layout for Desktop */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-28 md:pt-12 lg:flex lg:gap-16 lg:items-start">
+      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-5 lg:px-8 pt-4 pb-32 md:pt-12 lg:flex lg:gap-16 lg:items-start overflow-x-hidden">
         
         {/* Left Side: Sticky Profile Card & Details */}
         <div className="w-full lg:w-[420px] shrink-0 lg:sticky lg:top-12 flex flex-col gap-8">
