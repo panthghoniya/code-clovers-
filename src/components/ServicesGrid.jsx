@@ -1,23 +1,11 @@
 import { motion } from 'framer-motion';
-import { 
-  Code2, 
-  Terminal, 
-  ShoppingCart, 
-  Pen, 
-  Palette, 
-  Video, 
-  Share2,
-  Code
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
-const iconMap = {
-  Code2,
-  TerminalSquare: Terminal, // Fallback for old name
-  ShoppingCart,
-  PenTool: Pen, // Fallback for old name
-  Palette,
-  Video,
-  Share2
+const themes = {
+  blue: { bg: 'bg-[#E6F4FF]', tag: 'bg-[#CDE8FE]' },
+  orange: { bg: 'bg-[#FFEADA]', tag: 'bg-[#FFD8B8]' },
+  purple: { bg: 'bg-[#EBE2F9]', tag: 'bg-[#D9C8F4]' },
+  green: { bg: 'bg-[#E5F9ED]', tag: 'bg-[#CCEFDB]' }
 };
 
 const container = {
@@ -40,8 +28,8 @@ const ServicesGrid = ({ services }) => {
         transition={{ duration: 0.5 }}
         className="mb-8 pl-2"
       >
-        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-1.5">Expertise</h2>
-        <p className="text-[#888888] text-sm md:text-base">Premium services for modern brands.</p>
+        <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-2">Expertise</h2>
+        <p className="text-muted-foreground text-sm md:text-base">Premium services for modern brands.</p>
       </motion.div>
 
       <motion.div 
@@ -49,22 +37,48 @@ const ServicesGrid = ({ services }) => {
         initial="hidden"
         whileInView="show"
         viewport={{ once: true }}
-        className="grid grid-cols-2 gap-4 md:gap-5"
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5"
       >
         {services.map((service) => {
-          const IconComponent = iconMap[service.icon] || Code;
+          const theme = themes[service.theme] || themes.blue;
+          
           return (
             <motion.div 
               key={service.id}
               variants={item}
-              className="premium-card p-6 md:p-8 flex flex-col items-start cursor-pointer group hover:bg-[#111] hover:-translate-y-1"
+              className="premium-card p-2 md:p-2.5 flex flex-col group cursor-pointer hover:-translate-y-1 transition-transform duration-300"
             >
-              <div className="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center mb-5 group-hover:bg-clover-primary/10 transition-colors duration-300">
-                <IconComponent className="w-6 h-6 text-white group-hover:text-clover-accent transition-colors duration-300" />
+              {/* Colored Block area matching the image */}
+              <div className={`${theme.bg} rounded-[24px] p-6 md:p-8 flex-grow flex flex-col transition-colors duration-300`}>
+                <h3 className="text-2xl md:text-[26px] font-heading font-bold text-[#111111] mb-3 leading-tight">
+                  {service.title}
+                </h3>
+                <p className="text-[#444444] text-sm md:text-[15px] font-medium leading-relaxed mb-6">
+                  {service.description}
+                </p>
+                
+                {/* Tags row */}
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {service.tags.map((tag, idx) => (
+                    <span 
+                      key={idx} 
+                      className={`${theme.tag} text-[#222222] text-[11px] md:text-xs font-semibold px-3.5 py-1.5 rounded-full transition-colors`}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-base md:text-lg font-semibold text-white/90 group-hover:text-white transition-colors duration-300">
-                {service.title}
-              </h3>
+              
+              {/* Bottom "Explore" row matching image structure */}
+              <div className="flex items-center justify-between px-4 py-3 md:px-5 md:py-4">
+                <span className="text-foreground font-heading font-bold text-lg">
+                  Explore
+                </span>
+                <div className="w-10 h-10 rounded-xl bg-foreground/10 flex items-center justify-center group-hover:bg-foreground group-hover:text-background transition-colors duration-300">
+                  <ArrowRight className="w-5 h-5 text-foreground group-hover:text-background transition-colors duration-300" />
+                </div>
+              </div>
             </motion.div>
           );
         })}

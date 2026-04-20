@@ -1,17 +1,36 @@
 {
-  "id": "exe-001",
-  "name": "Alex Carter",
-  "role": "Senior Sales Executive",
-  "company": "Code Clover",
-  "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=400&h=400",
-  "stats": {
-    "clients": "150+",
-    "deals": "$2M+",
-    "experience": "5 Years"
+  "sivangi": {
+    "id": "exe-siv",
+    "name": "Sivangi",
+    "role": "Senior Sales Executive",
+    "company": "Code Clover",
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=600&h=600",
+    "stats": {
+      "clients": "150+",
+      "deals": "$2.5M+",
+      "experience": "5 Years"
+    },
+    "contact": {
+      "phone": "+1234567890",
+      "whatsapp": "1234567890",
+      "email": "sivangi@codeclover.com"
+    }
   },
-  "contact": {
-    "phone": "+1234567890",
-    "whatsapp": "1234567890",
-    "email": "alex.carter@codeclover.com"
+  "param": {
+    "id": "exe-par",
+    "name": "Param",
+    "role": "Enterprise Sales Director",
+    "company": "Code Clover",
+    "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&q=80&w=600&h=600",
+    "stats": {
+      "clients": "300+",
+      "deals": "$8M+",
+      "experience": "10 Years"
+    },
+    "contact": {
+      "phone": "+0987654321",
+      "whatsapp": "0987654321",
+      "email": "param@codeclover.com"
+    }
   }
 }

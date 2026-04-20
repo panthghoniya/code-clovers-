@@ -1,37 +1,51 @@
 [
   {
     "id": "srv-1",
-    "title": "Web Development",
-    "icon": "Code2"
+    "title": "Web Design",
+    "description": "Crafts engaging, user-friendly websites.",
+    "tags": ["Landing Page", "Website", "One Page"],
+    "theme": "blue"
   },
   {
     "id": "srv-2",
-    "title": "Software Development",
-    "icon": "TerminalSquare"
+    "title": "Graphic Design",
+    "description": "Creates impactful visuals and branding.",
+    "tags": ["Packaging", "Brand Identity", "Illustrations", "Logo", "Signage"],
+    "theme": "orange"
   },
   {
     "id": "srv-3",
-    "title": "Shopify Websites",
-    "icon": "ShoppingCart"
+    "title": "Developers",
+    "description": "Builds functional and scalable solutions.",
+    "tags": ["Web Applications", "Mobile Apps", "Database", "Add-ons"],
+    "theme": "purple"
   },
   {
     "id": "srv-4",
-    "title": "UI/UX Design",
-    "icon": "PenTool"
+    "title": "Copywriting",
+    "description": "Delivers persuasive and creative content.",
+    "tags": ["Blog Posts", "Video Scripts", "Sales Pages", "Slogans"],
+    "theme": "green"
   },
   {
     "id": "srv-5",
-    "title": "Graphic Designing",
-    "icon": "Palette"
+    "title": "Shopify Websites",
+    "description": "Builds high-converting e-commerce stores.",
+    "tags": ["E-Commerce", "Store Setup", "Custom Theme"],
+    "theme": "blue"
   },
   {
     "id": "srv-6",
     "title": "Video Editing",
-    "icon": "Video"
+    "description": "Produces engaging and cinematic video content.",
+    "tags": ["Reels", "Promos", "YouTube", "Color Grading"],
+    "theme": "orange"
   },
   {
     "id": "srv-7",
-    "title": "Social Media Handling",
-    "icon": "Share2"
+    "title": "Social Media",
+    "description": "Manages brand presence and audience growth.",
+    "tags": ["Content Strategy", "Community", "Analytics"],
+    "theme": "green"
   }
 ]

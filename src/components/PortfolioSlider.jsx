@@ -10,8 +10,8 @@ const PortfolioSlider = ({ portfolio }) => {
         transition={{ duration: 0.5 }}
         className="mb-8 pl-2"
       >
-        <h2 className="text-2xl md:text-3xl font-heading font-bold text-white mb-1.5">Featured Work</h2>
-        <p className="text-[#888888] text-sm md:text-base">Selected projects driving real results.</p>
+        <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-1.5">Featured Work</h2>
+        <p className="text-muted-foreground text-sm md:text-base">Selected projects driving real results.</p>
       </motion.div>
 
       <div className="w-full overflow-x-auto no-scrollbar pb-8 -mx-4 px-4 sm:mx-0 sm:px-0">
@@ -19,31 +19,43 @@ const PortfolioSlider = ({ portfolio }) => {
           {portfolio.map((project, index) => (
             <motion.div 
               key={project.id}
-              initial={{ opacity: 0, x: 30 }}
+              initial={{ opacity: 0, x: 40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="w-[280px] md:w-[340px] premium-card shrink-0 group hover:-translate-y-1"
+              className="w-[300px] md:w-[380px] h-[400px] md:h-[480px] rounded-[32px] overflow-hidden relative shrink-0 group cursor-pointer shadow-lg"
             >
-              <div className="relative h-56 overflow-hidden bg-[#0D0D0D]">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out opacity-90 group-hover:opacity-100"
-                />
-                <div className="absolute top-4 left-4 z-20">
-                  <span className="px-3.5 py-1.5 bg-black/60 backdrop-blur-xl rounded-full text-[10px] uppercase tracking-widest font-bold text-white">
+              {/* Full Background Image */}
+              <img 
+                src={project.image} 
+                alt={project.title} 
+                className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-[1.5s] ease-out"
+              />
+              
+              {/* Dark Gradient Overlay for readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-100 transition-opacity duration-500" />
+
+              {/* Top Category Badge */}
+              <div className="absolute top-6 left-6 z-20 overflow-hidden rounded-full">
+                <div className="px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20">
+                  <span className="text-[10px] md:text-xs uppercase tracking-[0.2em] font-bold text-white">
                     {project.category}
                   </span>
                 </div>
               </div>
               
-              <div className="p-6 bg-[#0D0D0D]">
-                <h3 className="text-xl font-heading font-bold text-white mb-2">{project.title}</h3>
+              {/* Bottom Content Area */}
+              <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-20 translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                <h3 className="text-2xl md:text-3xl font-heading font-bold text-white mb-3 leading-tight">
+                  {project.title}
+                </h3>
+                
                 {project.result && (
-                  <div className="flex items-center gap-2">
-                    <div className="w-1.5 h-1.5 rounded-full bg-clover-accent" />
-                    <p className="text-xs font-semibold text-[#888888] uppercase tracking-wider">{project.result}</p>
+                  <div className="flex items-center gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+                    <div className="w-8 h-px bg-clover-accent" />
+                    <p className="text-[11px] md:text-xs font-semibold text-white/80 uppercase tracking-wider">
+                      {project.result}
+                    </p>
                   </div>
                 )}
               </div>

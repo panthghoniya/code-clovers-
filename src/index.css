@@ -1,24 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --background: #F7F7F8;
+    --foreground: #09090B;
+    --card: #FFFFFF;
+    --card-foreground: #09090B;
+    --card-border: rgba(0, 0, 0, 0.08);
+    --muted: #F4F4F5;
+    --muted-foreground: #71717A;
+    --accent: #22C55E;
+    --primary: #0B8F4D;
+  }
+
+  .dark {
+    --background: #030303;
+    --foreground: #FFFFFF;
+    --card: #0D0D0D;
+    --card-foreground: #FFFFFF;
+    --card-border: rgba(255, 255, 255, 0.05);
+    --muted: #1A1A1A;
+    --muted-foreground: #888888;
+    --accent: #22C55E;
+    --primary: #0B8F4D;
+  }
+
   body {
-    @apply bg-[#030303] text-text-primary font-sans antialiased overflow-x-hidden;
+    @apply bg-[var(--background)] text-[var(--foreground)] font-sans antialiased overflow-x-hidden transition-colors duration-500;
     min-height: 100vh;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: Gasdrifo, "Bodoni Moda", serif;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
     @apply tracking-tight;
   }
 }
 
 @layer utilities {
   .premium-card {
-    @apply bg-[#0D0D0D] border border-white/5 rounded-[32px] overflow-hidden transition-all duration-500 hover:border-white/10;
+    @apply bg-[var(--card)] border border-[var(--card-border)] rounded-[32px] overflow-hidden transition-all duration-500 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:border-[var(--card-border)] hover:shadow-[0_8px_30px_rgba(0,0,0,0.06)] dark:shadow-none dark:hover:border-white/10 dark:hover:shadow-[0_8px_30px_rgba(0,0,0,0.2)];
   }
   
   .no-scrollbar::-webkit-scrollbar {

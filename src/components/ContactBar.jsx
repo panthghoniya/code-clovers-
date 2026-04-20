@@ -10,14 +10,14 @@ const ContactBar = ({ contact }) => {
       className="fixed bottom-0 left-0 right-0 z-50 px-4 pb-4 md:pb-6 pointer-events-none"
     >
       <div className="max-w-2xl mx-auto pointer-events-auto">
-        <div className="premium-card p-2 md:p-3 flex items-center justify-between gap-2 md:gap-3 bg-[#0D0D0D]/90 backdrop-blur-2xl shadow-2xl border-white/10">
+        <div className="premium-card p-2 md:p-3 flex items-center justify-between gap-2 md:gap-3 bg-card/90 backdrop-blur-2xl shadow-2xl border-border">
           
           <a 
             href={`tel:${contact.phone}`}
-            className="flex-1 flex items-center justify-center gap-2 py-3.5 rounded-2xl hover:bg-white/5 group transition-all"
+            className="flex-1 flex items-center justify-center gap-2 py-3.5 rounded-2xl hover:bg-foreground/5 group transition-all"
           >
-            <Phone className="w-4 h-4 text-[#888888] group-hover:text-white transition-colors" />
-            <span className="text-[11px] md:text-sm font-semibold text-[#888888] group-hover:text-white transition-colors uppercase tracking-widest">Call</span>
+            <Phone className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+            <span className="text-[11px] md:text-sm font-semibold text-muted-foreground group-hover:text-foreground transition-colors uppercase tracking-widest">Call</span>
           </a>
 
           <a 
@@ -32,10 +32,10 @@ const ContactBar = ({ contact }) => {
 
           <a 
             href={`mailto:${contact.email}`}
-            className="flex-1 flex items-center justify-center gap-2 py-3.5 rounded-2xl hover:bg-white/5 group transition-all"
+            className="flex-1 flex items-center justify-center gap-2 py-3.5 rounded-2xl hover:bg-foreground/5 group transition-all"
           >
-            <Mail className="w-4 h-4 text-[#888888] group-hover:text-white transition-colors" />
-            <span className="text-[11px] md:text-sm font-semibold text-[#888888] group-hover:text-white transition-colors uppercase tracking-widest">Email</span>
+            <Mail className="w-4 h-4 text-muted-foreground group-hover:text-foreground transition-colors" />
+            <span className="text-[11px] md:text-sm font-semibold text-muted-foreground group-hover:text-foreground transition-colors uppercase tracking-widest">Email</span>
           </a>
 
         </div>

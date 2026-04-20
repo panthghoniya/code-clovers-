@@ -15,7 +15,7 @@ const ProfileHeader = ({ executive }) => {
         - Clean typography below
         - Inline stats and pill button at the bottom
       */}
-      <div className="premium-card flex flex-col relative bg-[#0D0D0D]">
+      <div className="premium-card flex flex-col relative">
         
         {/* Top Image Section - Flush to edges like the reference */}
         <div className="relative w-full h-[350px] md:h-[420px] overflow-hidden rounded-t-[32px]">
@@ -25,7 +25,7 @@ const ProfileHeader = ({ executive }) => {
             className="w-full h-full object-cover object-top"
           />
           {/* Subtle gradient to ensure the transition to the dark card is not too harsh */}
-          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#0D0D0D] to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[var(--card)] to-transparent" />
         </div>
 
         {/* Content Section */}
@@ -33,15 +33,15 @@ const ProfileHeader = ({ executive }) => {
           
           {/* Name & Verification (Left Aligned) */}
           <div className="flex items-center gap-2.5 mb-1">
-            <h1 className="text-3xl md:text-4xl font-heading font-bold text-white tracking-tight">
+            <h1 className="text-3xl md:text-4xl font-heading font-bold text-foreground tracking-tight">
               {executive.name}
             </h1>
-            <BadgeCheck className="w-7 h-7 text-clover-accent fill-[#0D0D0D]" />
+            <BadgeCheck className="w-7 h-7 text-clover-accent fill-[var(--card)]" />
           </div>
           
           {/* Description */}
-          <p className="text-[#888888] text-[15px] md:text-[17px] leading-relaxed max-w-[90%] mb-10">
-            <span className="text-white/90">{executive.role}</span> who focuses on scaling businesses with premium digital solutions & usability.
+          <p className="text-muted-foreground text-[15px] md:text-[17px] leading-relaxed max-w-[90%] mb-10">
+            <span className="text-foreground/90 font-medium">{executive.role}</span> who focuses on scaling businesses with premium digital solutions & usability.
           </p>
 
           {/* Bottom Stats Row */}
@@ -49,13 +49,13 @@ const ProfileHeader = ({ executive }) => {
             
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-[#888888]" />
-                <span className="text-white font-semibold font-heading text-lg">{executive.stats.clients}</span>
+                <Users className="w-5 h-5 text-muted-foreground" />
+                <span className="text-foreground font-semibold font-heading text-lg">{executive.stats.clients}</span>
               </div>
               
               <div className="flex items-center gap-2">
-                <Briefcase className="w-5 h-5 text-[#888888]" />
-                <span className="text-white font-semibold font-heading text-lg">{executive.stats.deals}</span>
+                <Briefcase className="w-5 h-5 text-muted-foreground" />
+                <span className="text-foreground font-semibold font-heading text-lg">{executive.stats.deals}</span>
               </div>
             </div>
 
@@ -63,7 +63,7 @@ const ProfileHeader = ({ executive }) => {
               href={`https://wa.me/${executive.contact.whatsapp}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-6 py-3 rounded-full bg-white text-black font-semibold hover:bg-white/90 transition-all active:scale-95 flex items-center gap-1.5 shadow-xl"
+              className="px-6 py-3 rounded-full bg-foreground text-background font-semibold hover:opacity-90 transition-all active:scale-95 flex items-center gap-1.5 shadow-xl"
             >
               Connect <Plus className="w-5 h-5" />
             </a>
